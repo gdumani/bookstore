@@ -1,7 +1,9 @@
+/* eslint-disable react/jsx-props-no-spreading */
+/* eslint-disable react/jsx-key */
 import React from 'react';
 import Book from './book';
 
-const BOOKDATA =  [
+const BOOKDATA = [
   {
     id: 1,
     title: 'The Hunger Game',
@@ -22,19 +24,14 @@ const BOOKDATA =  [
   },
 ];
 
-const Booklist = () => {
-  return (
-    <div>
-      <ul>
-        {BOOKDATA.map((book) => {
-          return(
-            <Book { ...book } />
-          )
-        })}
-      </ul>
-    </div>
-  );
-}
+const Booklist = () => (
+  <div>
+    <ul>
+      {BOOKDATA.map((book) => (
+        <Book {...book} />
+      ))}
+    </ul>
+  </div>
+);
 
 export default Booklist;
-

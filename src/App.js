@@ -3,7 +3,7 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-} from 'react-router-dom'
+} from 'react-router-dom';
 import './App.css';
 import NavBar from './components/navbar';
 import Categories from './redux/categories/categories';
@@ -14,8 +14,8 @@ function App() {
     <Router>
       <NavBar />
       <Routes>
-        <Route path='/' element={<Books />} />
-        <Route path='/categories' element={<Categories />} />
+        <Route path="/" element={<Books />} />
+        <Route path="/categories" element={<Categories />} />
       </Routes>
     </Router>
   );
