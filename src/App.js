@@ -6,8 +6,8 @@ import {
 } from 'react-router-dom';
 import './App.css';
 import NavBar from './components/navbar';
-import Categories from './redux/categories/categories';
-import Books from './redux/books/books';
+import Categories from './pages/categories';
+import Books from './pages/books';
 
 function App() {
   return (
