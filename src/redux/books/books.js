@@ -26,8 +26,9 @@ export const addBook = (payload) => ({
   type: ADD_BOOK,
   payload,
 });
-export const removeBook = () => ({
+export const removeBook = (id) => ({
   type: REMOVE_BOOK,
+  id,
 });
 
 const reducer = (state = initialState, action) => {
