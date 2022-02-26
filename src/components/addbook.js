@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { addBook } from '../redux/books/books';
 
 const Addbook = () => {
-  const tempCats = ['Action', 'Science Fiction', 'Economy', 'Other'];
+  const tempCats = ['Category', 'Action', 'Science Fiction', 'Economy', 'Education', 'Romance', 'Self Improvment', 'Other'];
   const [title, setTitle] = useState('');
   const [category, setCategory] = useState('Category');
   const currentBooks = useSelector((state) => state.booksReducer);
@@ -35,10 +35,9 @@ const Addbook = () => {
         <select
           id="category"
           name="category"
-          defaultValue={category}
+          defaultValue={tempCats[0]}
           onChange={({ target }) => setCategory(target.value)}
         >
-          <option value={category} disabled>Category</option>
           {tempCats.map((category) => (
             <option key={category} value={category}>{category}</option>
           ))}

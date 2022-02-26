@@ -6,10 +6,7 @@ import { removeBook } from '../redux/books/books';
 const Book = (props) => {
   const dispatch = useDispatch();
   const {
-    id,
-    title,
-    author,
-    category,
+    id, title, author, category,
   } = props;
   return (
     <li>
